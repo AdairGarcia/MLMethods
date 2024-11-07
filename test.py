@@ -1,4 +1,5 @@
-from main import extraer_datos
-data = extraer_datos('./corpus/raw data corpus.csv')
+from main import extraer_datos, generar_raw_corpus, generar_normalized_corpus
 
-print(data)
+data = extraer_datos('./corpus/raw data corpus.csv')
+generar_raw_corpus(data[0], data[1])
+generar_normalized_corpus()
