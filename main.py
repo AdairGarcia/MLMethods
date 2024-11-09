@@ -16,18 +16,54 @@ def extraer_datos(ruta):
 # funcion para concatenar dos columnas de datos en una sola para todas las columnas
 # y crear el nuevo archivo cvs
 def generar_raw_corpus(data, target):
-    new_df = pd.DataFrame()
-    new_df['Title + Content'] = data['Title'] + ' ' + data['Content']
-    new_df['Target'] = target
-    proporcion_corpus(new_df)
+    # Verificar si el archivo ya existe
+    try:
+        df = pd.read_csv('corpus/raw_data_corpus.csv')
+        proporcion_corpus(df)
+    except FileNotFoundError:
+        new_df = pd.DataFrame()
+        new_df['Title + Content'] = data['Title'] + ' ' + data['Content']
+        new_df['Target'] = target
+        new_df.to_csv('corpus/raw_data_corpus.csv', index=False)
+        proporcion_corpus(new_df)
+
+# funcion para saber la proporcion de los target en los datos
+def stratification(data):
+    return data['Target'].value_counts(normalize=True)
 
 # funcion para separar el 80% de los datos para entrenamiento y el 20% para test
+# esta funcion utiliza la proporcion de los target para mantener la proporcion en los datos
+# en el entrenamiento y test
 def proporcion_corpus(data):
-    train = data.sample(frac=0.8, random_state=200)
-    test = data.drop(train.index)
-    train.to_csv('corpus/raw_train_corpus.csv', index=False)
-    test.to_csv('corpus/raw_test_corpus.csv', index=False)
-    print('Raw Corpus generados con exito')
+    # Verificar si los archivos ya existen
+    try:
+        train = pd.read_csv('corpus/raw_train_corpus.csv')
+        test = pd.read_csv('corpus/raw_test_corpus.csv')
+        print('Los corpus ya existen')
+        print(f'Proporcion de los datos crudos: {stratification(data)}')
+        print(f'Proporcion de los datos de entrenamiento: {stratification(train)}')
+        print(f'Proporcion de los datos de test: {stratification(test)}')
+    except FileNotFoundError:
+        proportion = stratification(data)
+        train = pd.DataFrame()
+        test = pd.DataFrame()
+
+        for target in proportion.index:
+            target_data = data[data['Target'] == target]
+            target_data = target_data.sample(frac=1)
+            target_train = target_data.iloc[:int(len(target_data) * 0.8)]
+            target_test = target_data.iloc[int(len(target_data) * 0.8):]
+            train = pd.concat([train, target_train])
+            test = pd.concat([test, target_test])
+
+        train.to_csv('corpus/raw_train_corpus.csv', index=False)
+        test.to_csv('corpus/raw_test_corpus.csv', index=False)
+
+        print(f'Proporcion de los datos crudos: {stratification(data)}')
+        print(f'Proporcion de los datos de entrenamiento: {stratification(train)}')
+        print(f'Proporcion de los datos de test: {stratification(test)}')
+
+        print('Raw Corpus generados con exito')
 
 # Funcion para normalizar los datos
 def normalizer(string):
