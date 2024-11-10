@@ -1,3 +1,3 @@
-from main import extraer_datos, generar_raw_corpus, generar_normalized_corpus, stratification, normalizer
+from main import generar_vectorized_data
 
-generar_normalized_corpus()
+generar_vectorized_data()

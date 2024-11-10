@@ -1,5 +1,8 @@
 import spacy as sp
 import pandas as pd
+import numpy as np
+import pickle
+from sklearn.decomposition import TruncatedSVD
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 
 # Cargar modelo de lenguaje español
@@ -94,21 +97,79 @@ def generar_normalized_corpus():
     df['Title + Content'] = df['Title + Content'].apply(normalizer)
     df.to_csv('corpus/normalized_test_corpus.csv', index=False)
 
+# funcion para la representacion de los datos en frecuencia
 def frequency_vectorize(corpus):
     vector = CountVectorizer()
     x = vector.fit_transform(corpus)
-    return vector, x
+    return x
 
+# funcion para la representacion de los datos en binario
 def binary_vectorize(corpus):
     vector = CountVectorizer(binary=True)
     x = vector.fit_transform(corpus)
-    return vector, x
+    return x
 
+# funcion para la representacion de los datos en tfidf
 def tfidf_vectorize(corpus):
     vector = TfidfVectorizer()
     x = vector.fit_transform(corpus)
-    return vector, x
+    return x
 
-# TODO: Implementar la funcion
-def embeddings_vectorize(corpus):
-    pass
+# Función para generar representaciones de embeddings (ejemplo simple con promedio de embeddings)
+def embeddings_vectorize(corpus, model):
+    embeddings = []
+    for doc in corpus:
+        tokens = doc.split()
+        doc_embedding = np.mean([model[token] for token in tokens if token in model], axis=0)
+        embeddings.append(doc_embedding)
+    return np.array(embeddings)
+
+# Función para aplicar SVD a una representación
+def apply_svd(x, n_components=50):
+    svd = TruncatedSVD(n_components=n_components)
+    x_reduced = svd.fit_transform(x)
+    return x_reduced
+
+# Función para generar y guardar las representaciones vectorizadas
+def generar_vectorized_data():
+    train = pd.read_csv('corpus/normalized_train_corpus.csv')
+    test = pd.read_csv('corpus/normalized_test_corpus.csv')
+
+    # Fill NaN values with empty strings
+    train['Title + Content'] = train['Title + Content'].fillna('')
+    test['Title + Content'] = test['Title + Content'].fillna('')
+
+    train_corpus = train['Title + Content'].tolist()
+    test_corpus = test['Title + Content'].tolist()
+
+    vectorization_methods = {
+        'freq': frequency_vectorize,
+        'binary': binary_vectorize,
+        'tfidf': tfidf_vectorize,
+    }
+
+    for method_name, vectorize in vectorization_methods.items():
+        x_train = vectorize(train_corpus)
+        x_test = vectorize(test_corpus)
+
+        # Guardar las representaciones vectorizadas
+        with open(f'unigrams/{method_name}_train.pkl', 'wb') as f:
+            # noinspection PyTypeChecker
+            pickle.dump(x_train, f)
+        with open(f'unigrams/{method_name}_test.pkl', 'wb') as f:
+            # noinspection PyTypeChecker
+            pickle.dump(x_test, f)
+
+        # Aplicar SVD y guardar las representaciones reducidas
+        x_train_svd = apply_svd(x_train)
+        x_test_svd = apply_svd(x_test)
+
+        with open(f'unigrams/{method_name}_train_svd.pkl', 'wb') as f:
+            # noinspection PyTypeChecker
+            pickle.dump(x_train_svd, f)
+        with open(f'unigrams/{method_name}_test_svd.pkl', 'wb') as f:
+            # noinspection PyTypeChecker
+            pickle.dump(x_test_svd, f)
+
+    print(f'Representaciones vectorizadas guardadas con éxito')
+
