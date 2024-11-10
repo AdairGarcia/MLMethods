@@ -1,7 +1,7 @@
-import spacy as sp
-import pandas as pd
-import numpy as np
 import pickle
+
+import pandas as pd
+import spacy as sp
 from sklearn.decomposition import TruncatedSVD
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 
@@ -87,6 +87,34 @@ def normalizer(string):
 
     return no_stop_words_string
 
+def remove_stop_words(string):
+    if not isinstance(string, str):
+        return ""
+
+    doc = nlp(string)
+    postaggin = ['DET', 'PRON', 'ADP', 'CCONJ', 'SCONJ', 'PUNCT']
+
+    no_stop_words_string = ""
+
+    for token in doc:
+        if not(token.pos_ in postaggin):
+            no_stop_words_string += token.text+ " "
+
+    return no_stop_words_string
+
+def lemmatiser(string):
+    if not isinstance(string, str):
+        return ""
+
+    doc = nlp(string)
+
+    lemmatised_string = ""
+
+    for token in doc:
+        lemmatised_string += token.lemma_ + " "
+
+    return lemmatised_string
+
 # funcion para normalizar los datos y crear el archivo cvs
 def generar_normalized_corpus():
     df = pd.read_csv('corpus/raw_train_corpus.csv')
@@ -96,6 +124,24 @@ def generar_normalized_corpus():
     df = pd.read_csv('corpus/raw_test_corpus.csv')
     df['Title + Content'] = df['Title + Content'].apply(normalizer)
     df.to_csv('corpus/normalized_test_corpus.csv', index=False)
+
+def generar_lemmatized_corpus():
+    df = pd.read_csv('corpus/raw_train_corpus.csv')
+    df['Title + Content'] = df['Title + Content'].apply(lemmatiser)
+    df.to_csv('corpus/lemmatized_train_corpus.csv', index=False)
+
+    df = pd.read_csv('corpus/raw_test_corpus.csv')
+    df['Title + Content'] = df['Title + Content'].apply(lemmatiser)
+    df.to_csv('corpus/lemmatized_test_corpus.csv', index=False)
+
+def generar_stop_words_removed_corpus():
+    df = pd.read_csv('corpus/raw_train_corpus.csv')
+    df['Title + Content'] = df['Title + Content'].apply(remove_stop_words)
+    df.to_csv('corpus/no_stop_words_train_corpus.csv', index=False)
+
+    df = pd.read_csv('corpus/raw_test_corpus.csv')
+    df['Title + Content'] = df['Title + Content'].apply(remove_stop_words)
+    df.to_csv('corpus/no_stop_words_test_corpus.csv', index=False)
 
 # funcion para la representacion de los datos en frecuencia
 def frequency_vectorize(corpus):
@@ -115,14 +161,7 @@ def tfidf_vectorize(corpus):
     x = vector.fit_transform(corpus)
     return x
 
-# Función para generar representaciones de embeddings (ejemplo simple con promedio de embeddings)
-def embeddings_vectorize(corpus, model):
-    embeddings = []
-    for doc in corpus:
-        tokens = doc.split()
-        doc_embedding = np.mean([model[token] for token in tokens if token in model], axis=0)
-        embeddings.append(doc_embedding)
-    return np.array(embeddings)
+
 
 # Función para aplicar SVD a una representación
 def apply_svd(x, n_components=50):
@@ -151,6 +190,7 @@ def generar_vectorized_data():
     for method_name, vectorize in vectorization_methods.items():
         x_train = vectorize(train_corpus)
         x_test = vectorize(test_corpus)
+
 
         # Guardar las representaciones vectorizadas
         with open(f'unigrams/{method_name}_train.pkl', 'wb') as f:
