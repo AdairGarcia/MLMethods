@@ -2,7 +2,11 @@ from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.neural_network import MLPClassifier
-from sklearn.svm import LinearSVC
+from sklearn.svm import SVC
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.manifold import LocallyLinearEmbedding
+from sklearn.manifold import SpectralEmbedding
 
 from methods import *
 
@@ -27,23 +31,30 @@ def test():
     models = {
         'Logistic Regression': LogisticRegression(),
         'Naive Bayes': MultinomialNB(),
-        'Neural Network': MLPClassifier(),
-        'Linear SVC': LinearSVC(),
+        'Support Vector Machine': SVC(),
+        'Multilayer Perceptron': MLPClassifier(),
+        'Random Forest': RandomForestClassifier(),
+        'Gradient Boosting': GradientBoostingClassifier(),
     }
     text_representations = {
         'Frequency': CountVectorizer(),
         'Binary': CountVectorizer(binary=True),
-        'TF-IDF': TfidfVectorizer()
+        'TF-IDF': TfidfVectorizer(),
     }
 
     for mode in modes:
-        print(mode)
+        print(f'#######################################-{mode.upper()}-#######################################')
         (x_train, y_train), (x_test, y_test) = get_x_y(mode)
         x_train, x_test = fill_na(x_train, x_test)
 
         for text_representation_name, text_representation in text_representations.items():
             for model_name, model in models.items():
-                print(f'{text_representation_name} - {model_name}')
+                if model_name == 'Naive Bayes' and text_representation_name == 'TF-IDF':
+                    print(f'-------------------------{text_representation_name} - {model_name}-------------------------{mode.upper()}')
+                    pipelines(x_train, y_train, x_test, y_test, text_representation, model, 1)
+                    print()
+
+                print(f'-------------------------{text_representation_name} - {model_name}-------------------------{mode.upper()}')
                 pipelines(x_train, y_train, x_test, y_test, text_representation, model)
                 print()
             print()
