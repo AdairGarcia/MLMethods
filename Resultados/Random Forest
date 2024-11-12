@@ -1,0 +1,211 @@
+#######################################-RAW-#######################################
+Fitting 5 folds for each of 243 candidates, totalling 1215 fits
+-------------------------Frequency - Random Forest-------------------------RAW
+Mejores parametros Frequency - Random Forest: {'classifier__max_features': 'log2', 'classifier__n_estimators': 100, 'vectorizer__max_df': 0.95, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 5, 'vectorizer__ngram_range': (1, 1)}
+Mejor macro avg f1-score: 0.6187394958307711
+                        precision    recall  f1-score   support
+
+               Culture       1.00      0.50      0.67        10
+               Economy       0.62      0.85      0.72        33
+Science and technology       0.67      0.59      0.62        17
+                Sports       0.89      0.57      0.70        14
+
+              accuracy                           0.69        74
+             macro avg       0.79      0.63      0.68        74
+          weighted avg       0.73      0.69      0.69        74
+
+
+
+Fitting 5 folds for each of 243 candidates, totalling 1215 fits
+-------------------------Binary - Random Forest-------------------------RAW
+Mejores parametros Binary - Random Forest: {'classifier__max_features': 'log2', 'classifier__n_estimators': 100, 'vectorizer__max_df': 0.75, 'vectorizer__max_features': 20000, 'vectorizer__min_df': 5, 'vectorizer__ngram_range': (1, 1)}
+Mejor macro avg f1-score: 0.5865668847342083
+                        precision    recall  f1-score   support
+
+               Culture       1.00      0.80      0.89        10
+               Economy       0.69      0.88      0.77        33
+Science and technology       0.71      0.59      0.65        17
+                Sports       0.90      0.64      0.75        14
+
+              accuracy                           0.76        74
+             macro avg       0.83      0.73      0.76        74
+          weighted avg       0.78      0.76      0.76        74
+
+
+
+Fitting 5 folds for each of 243 candidates, totalling 1215 fits
+-------------------------TF-IDF - Random Forest-------------------------RAW
+Mejores parametros TF-IDF - Random Forest: {'classifier__max_features': 'log2', 'classifier__n_estimators': 50, 'vectorizer__max_df': 0.95, 'vectorizer__max_features': 10000, 'vectorizer__min_df': 5, 'vectorizer__ngram_range': (1, 1)}
+Mejor macro avg f1-score: 0.613320250932917
+                        precision    recall  f1-score   support
+
+               Culture       1.00      0.40      0.57        10
+               Economy       0.61      0.91      0.73        33
+Science and technology       0.62      0.47      0.53        17
+                Sports       1.00      0.57      0.73        14
+
+              accuracy                           0.68        74
+             macro avg       0.81      0.59      0.64        74
+          weighted avg       0.74      0.68      0.66        74
+
+
+
+#######################################-LEMMATIZED-#######################################
+Fitting 5 folds for each of 243 candidates, totalling 1215 fits
+-------------------------Frequency - Random Forest-------------------------LEMMATIZED
+Mejores parametros Frequency - Random Forest: {'classifier__max_features': 'log2', 'classifier__n_estimators': 100, 'vectorizer__max_df': 0.75, 'vectorizer__max_features': 20000, 'vectorizer__min_df': 5, 'vectorizer__ngram_range': (1, 1)}
+Mejor macro avg f1-score: 0.655454350319384
+                        precision    recall  f1-score   support
+
+               Culture       1.00      0.50      0.67        10
+               Economy       0.71      0.91      0.80        33
+Science and technology       0.63      0.71      0.67        17
+                Sports       1.00      0.57      0.73        14
+
+              accuracy                           0.74        74
+             macro avg       0.84      0.67      0.72        74
+          weighted avg       0.79      0.74      0.74        74
+
+
+
+Fitting 5 folds for each of 243 candidates, totalling 1215 fits
+-------------------------Binary - Random Forest-------------------------LEMMATIZED
+Mejores parametros Binary - Random Forest: {'classifier__max_features': 'log2', 'classifier__n_estimators': 200, 'vectorizer__max_df': 0.75, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 5, 'vectorizer__ngram_range': (1, 1)}
+Mejor macro avg f1-score: 0.6532268791769238
+                        precision    recall  f1-score   support
+
+               Culture       1.00      0.60      0.75        10
+               Economy       0.75      0.91      0.82        33
+Science and technology       0.65      0.65      0.65        17
+                Sports       1.00      0.79      0.88        14
+
+              accuracy                           0.78        74
+             macro avg       0.85      0.74      0.77        74
+          weighted avg       0.81      0.78      0.78        74
+
+
+
+Fitting 5 folds for each of 243 candidates, totalling 1215 fits
+-------------------------TF-IDF - Random Forest-------------------------LEMMATIZED
+Mejores parametros TF-IDF - Random Forest: {'classifier__max_features': 'log2', 'classifier__n_estimators': 50, 'vectorizer__max_df': 0.75, 'vectorizer__max_features': 10000, 'vectorizer__min_df': 5, 'vectorizer__ngram_range': (1, 1)}
+Mejor macro avg f1-score: 0.6039824054182202
+                        precision    recall  f1-score   support
+
+               Culture       0.86      0.60      0.71        10
+               Economy       0.65      0.97      0.78        33
+Science and technology       0.90      0.53      0.67        17
+                Sports       0.88      0.50      0.64        14
+
+              accuracy                           0.73        74
+             macro avg       0.82      0.65      0.70        74
+          weighted avg       0.78      0.73      0.72        74
+
+
+
+#######################################-NO_STOP_WORDS-#######################################
+Fitting 5 folds for each of 243 candidates, totalling 1215 fits
+-------------------------Frequency - Random Forest-------------------------NO_STOP_WORDS
+Mejores parametros Frequency - Random Forest: {'classifier__max_features': 'log2', 'classifier__n_estimators': 50, 'vectorizer__max_df': 0.85, 'vectorizer__max_features': 20000, 'vectorizer__min_df': 5, 'vectorizer__ngram_range': (1, 1)}
+Mejor macro avg f1-score: 0.690034719103798
+                        precision    recall  f1-score   support
+
+               Culture       0.88      0.70      0.78        10
+               Economy       0.78      0.85      0.81        33
+Science and technology       0.58      0.41      0.48        17
+                Sports       0.72      0.93      0.81        14
+
+              accuracy                           0.74        74
+             macro avg       0.74      0.72      0.72        74
+          weighted avg       0.74      0.74      0.73        74
+
+
+
+Fitting 5 folds for each of 243 candidates, totalling 1215 fits
+-------------------------Binary - Random Forest-------------------------NO_STOP_WORDS
+Mejores parametros Binary - Random Forest: {'classifier__max_features': 'sqrt', 'classifier__n_estimators': 100, 'vectorizer__max_df': 0.85, 'vectorizer__max_features': 10000, 'vectorizer__min_df': 5, 'vectorizer__ngram_range': (1, 1)}
+Mejor macro avg f1-score: 0.677718385543624
+                        precision    recall  f1-score   support
+
+               Culture       0.70      0.70      0.70        10
+               Economy       0.83      0.88      0.85        33
+Science and technology       0.82      0.53      0.64        17
+                Sports       0.72      0.93      0.81        14
+
+              accuracy                           0.78        74
+             macro avg       0.77      0.76      0.75        74
+          weighted avg       0.79      0.78      0.78        74
+
+
+
+Fitting 5 folds for each of 243 candidates, totalling 1215 fits
+-------------------------TF-IDF - Random Forest-------------------------NO_STOP_WORDS
+Mejores parametros TF-IDF - Random Forest: {'classifier__max_features': 'log2', 'classifier__n_estimators': 200, 'vectorizer__max_df': 0.75, 'vectorizer__max_features': 20000, 'vectorizer__min_df': 5, 'vectorizer__ngram_range': (1, 1)}
+Mejor macro avg f1-score: 0.6708822104005818
+                        precision    recall  f1-score   support
+
+               Culture       0.75      0.60      0.67        10
+               Economy       0.82      0.82      0.82        33
+Science and technology       0.64      0.53      0.58        17
+                Sports       0.68      0.93      0.79        14
+
+              accuracy                           0.74        74
+             macro avg       0.72      0.72      0.71        74
+          weighted avg       0.74      0.74      0.74        74
+
+
+
+#######################################-NORMALIZED-#######################################
+Fitting 5 folds for each of 243 candidates, totalling 1215 fits
+-------------------------Frequency - Random Forest-------------------------NORMALIZED
+Mejores parametros Frequency - Random Forest: {'classifier__max_features': 'sqrt', 'classifier__n_estimators': 200, 'vectorizer__max_df': 0.75, 'vectorizer__max_features': 10000, 'vectorizer__min_df': 5, 'vectorizer__ngram_range': (1, 1)}
+Mejor macro avg f1-score: 0.6849377516248686
+                        precision    recall  f1-score   support
+
+               Culture       1.00      0.60      0.75        10
+               Economy       0.69      0.88      0.77        33
+Science and technology       0.73      0.65      0.69        17
+                Sports       0.91      0.71      0.80        14
+
+              accuracy                           0.76        74
+             macro avg       0.83      0.71      0.75        74
+          weighted avg       0.78      0.76      0.76        74
+
+
+
+Fitting 5 folds for each of 243 candidates, totalling 1215 fits
+-------------------------Binary - Random Forest-------------------------NORMALIZED
+Mejores parametros Binary - Random Forest: {'classifier__max_features': 'log2', 'classifier__n_estimators': 100, 'vectorizer__max_df': 0.95, 'vectorizer__max_features': 20000, 'vectorizer__min_df': 5, 'vectorizer__ngram_range': (1, 1)}
+Mejor macro avg f1-score: 0.6872578860589964
+                        precision    recall  f1-score   support
+
+               Culture       0.86      0.60      0.71        10
+               Economy       0.80      0.85      0.82        33
+Science and technology       0.68      0.76      0.72        17
+                Sports       0.92      0.86      0.89        14
+
+              accuracy                           0.80        74
+             macro avg       0.82      0.77      0.79        74
+          weighted avg       0.80      0.80      0.80        74
+
+
+
+Fitting 5 folds for each of 243 candidates, totalling 1215 fits
+-------------------------TF-IDF - Random Forest-------------------------NORMALIZED
+Mejores parametros TF-IDF - Random Forest: {'classifier__max_features': 'log2', 'classifier__n_estimators': 200, 'vectorizer__max_df': 0.95, 'vectorizer__max_features': 20000, 'vectorizer__min_df': 5, 'vectorizer__ngram_range': (1, 1)}
+Mejor macro avg f1-score: 0.6824567935774566
+                        precision    recall  f1-score   support
+
+               Culture       0.83      0.50      0.62        10
+               Economy       0.73      0.91      0.81        33
+Science and technology       0.75      0.71      0.73        17
+                Sports       0.91      0.71      0.80        14
+
+              accuracy                           0.77        74
+             macro avg       0.81      0.71      0.74        74
+          weighted avg       0.78      0.77      0.76        74
+
+
+
+Tiempo de ejecución: 901.1238675117493 segundos
+
+Process finished with exit code 0

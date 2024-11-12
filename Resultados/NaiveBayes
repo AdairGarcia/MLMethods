@@ -1,0 +1,209 @@
+#######################################-RAW-#######################################
+Fitting 5 folds for each of 81 candidates, totalling 405 fits
+-------------------------Frequency - Naive Bayes-------------------------RAW
+Mejores parametros Frequency - Naive Bayes: {'classifier__alpha': 0.1, 'vectorizer__max_df': 0.85, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
+Mejor macro avg f1-score: 0.7706810915379283
+                        precision    recall  f1-score   support
+
+               Culture       0.89      0.80      0.84        10
+               Economy       0.85      0.88      0.87        33
+Science and technology       0.75      0.71      0.73        17
+                Sports       0.80      0.86      0.83        14
+
+              accuracy                           0.82        74
+             macro avg       0.82      0.81      0.82        74
+          weighted avg       0.82      0.82      0.82        74
+
+
+
+Fitting 5 folds for each of 81 candidates, totalling 405 fits
+-------------------------Binary - Naive Bayes-------------------------RAW
+Mejores parametros Binary - Naive Bayes: {'classifier__alpha': 0.1, 'vectorizer__max_df': 0.95, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
+Mejor macro avg f1-score: 0.7645851753785298
+                        precision    recall  f1-score   support
+
+               Culture       1.00      0.80      0.89        10
+               Economy       0.83      0.91      0.87        33
+Science and technology       0.80      0.71      0.75        17
+                Sports       0.87      0.93      0.90        14
+
+              accuracy                           0.85        74
+             macro avg       0.88      0.84      0.85        74
+          weighted avg       0.85      0.85      0.85        74
+
+
+
+Fitting 5 folds for each of 81 candidates, totalling 405 fits
+-------------------------TF-IDF - Naive Bayes-------------------------RAW
+Mejores parametros TF-IDF - Naive Bayes: {'classifier__alpha': 0.1, 'vectorizer__max_df': 0.75, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 2, 'vectorizer__ngram_range': (1, 1)}
+Mejor macro avg f1-score: 0.7350101828770181
+                        precision    recall  f1-score   support
+
+               Culture       0.78      0.70      0.74        10
+               Economy       0.82      0.94      0.87        33
+Science and technology       0.73      0.65      0.69        17
+                Sports       0.92      0.79      0.85        14
+
+              accuracy                           0.81        74
+             macro avg       0.81      0.77      0.79        74
+          weighted avg       0.81      0.81      0.81        74
+
+
+
+#######################################-LEMMATIZED-#######################################
+Fitting 5 folds for each of 81 candidates, totalling 405 fits
+-------------------------Frequency - Naive Bayes-------------------------LEMMATIZED
+Mejores parametros Frequency - Naive Bayes: {'classifier__alpha': 0.5, 'vectorizer__max_df': 0.85, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 2, 'vectorizer__ngram_range': (1, 1)}
+Mejor macro avg f1-score: 0.7910477128618554
+                        precision    recall  f1-score   support
+
+               Culture       0.90      0.90      0.90        10
+               Economy       0.85      0.88      0.87        33
+Science and technology       0.71      0.71      0.71        17
+                Sports       0.92      0.86      0.89        14
+
+              accuracy                           0.84        74
+             macro avg       0.85      0.84      0.84        74
+          weighted avg       0.84      0.84      0.84        74
+
+
+
+Fitting 5 folds for each of 81 candidates, totalling 405 fits
+-------------------------Binary - Naive Bayes-------------------------LEMMATIZED
+Mejores parametros Binary - Naive Bayes: {'classifier__alpha': 0.1, 'vectorizer__max_df': 0.75, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
+Mejor macro avg f1-score: 0.7967393371626066
+                        precision    recall  f1-score   support
+
+               Culture       1.00      0.80      0.89        10
+               Economy       0.83      0.88      0.85        33
+Science and technology       0.76      0.76      0.76        17
+                Sports       0.86      0.86      0.86        14
+
+              accuracy                           0.84        74
+             macro avg       0.86      0.83      0.84        74
+          weighted avg       0.84      0.84      0.84        74
+
+
+
+Fitting 5 folds for each of 81 candidates, totalling 405 fits
+-------------------------TF-IDF - Naive Bayes-------------------------LEMMATIZED
+Mejores parametros TF-IDF - Naive Bayes: {'classifier__alpha': 0.1, 'vectorizer__max_df': 0.85, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
+Mejor macro avg f1-score: 0.7550811412455308
+                        precision    recall  f1-score   support
+
+               Culture       1.00      0.60      0.75        10
+               Economy       0.73      0.91      0.81        33
+Science and technology       0.85      0.65      0.73        17
+                Sports       0.86      0.86      0.86        14
+
+              accuracy                           0.80        74
+             macro avg       0.86      0.75      0.79        74
+          weighted avg       0.82      0.80      0.79        74
+
+
+
+#######################################-NO_STOP_WORDS-#######################################
+Fitting 5 folds for each of 81 candidates, totalling 405 fits
+-------------------------Frequency - Naive Bayes-------------------------NO_STOP_WORDS
+Mejores parametros Frequency - Naive Bayes: {'classifier__alpha': 0.1, 'vectorizer__max_df': 0.75, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
+Mejor macro avg f1-score: 0.7786109305995665
+                        precision    recall  f1-score   support
+
+               Culture       0.88      0.70      0.78        10
+               Economy       0.78      0.88      0.83        33
+Science and technology       0.79      0.65      0.71        17
+                Sports       0.80      0.86      0.83        14
+
+              accuracy                           0.80        74
+             macro avg       0.81      0.77      0.79        74
+          weighted avg       0.80      0.80      0.79        74
+
+
+
+Fitting 5 folds for each of 81 candidates, totalling 405 fits
+-------------------------Binary - Naive Bayes-------------------------NO_STOP_WORDS
+Mejores parametros Binary - Naive Bayes: {'classifier__alpha': 0.1, 'vectorizer__max_df': 0.75, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
+Mejor macro avg f1-score: 0.7685297788539812
+                        precision    recall  f1-score   support
+
+               Culture       1.00      0.70      0.82        10
+               Economy       0.76      0.88      0.82        33
+Science and technology       0.73      0.65      0.69        17
+                Sports       0.86      0.86      0.86        14
+
+              accuracy                           0.80        74
+             macro avg       0.84      0.77      0.80        74
+          weighted avg       0.81      0.80      0.80        74
+
+
+
+Fitting 5 folds for each of 81 candidates, totalling 405 fits
+-------------------------TF-IDF - Naive Bayes-------------------------NO_STOP_WORDS
+Mejores parametros TF-IDF - Naive Bayes: {'classifier__alpha': 0.1, 'vectorizer__max_df': 0.75, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
+Mejor macro avg f1-score: 0.754628162447144
+                        precision    recall  f1-score   support
+
+               Culture       1.00      0.60      0.75        10
+               Economy       0.74      0.94      0.83        33
+Science and technology       0.79      0.65      0.71        17
+                Sports       0.92      0.79      0.85        14
+
+              accuracy                           0.80        74
+             macro avg       0.86      0.74      0.78        74
+          weighted avg       0.82      0.80      0.79        74
+
+
+
+#######################################-NORMALIZED-#######################################
+Fitting 5 folds for each of 81 candidates, totalling 405 fits
+-------------------------Frequency - Naive Bayes-------------------------NORMALIZED
+Mejores parametros Frequency - Naive Bayes: {'classifier__alpha': 0.1, 'vectorizer__max_df': 0.75, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
+Mejor macro avg f1-score: 0.7945862977602107
+                        precision    recall  f1-score   support
+
+               Culture       1.00      0.90      0.95        10
+               Economy       0.88      0.85      0.86        33
+Science and technology       0.78      0.82      0.80        17
+                Sports       0.80      0.86      0.83        14
+
+              accuracy                           0.85        74
+             macro avg       0.86      0.86      0.86        74
+          weighted avg       0.86      0.85      0.85        74
+
+
+
+Fitting 5 folds for each of 81 candidates, totalling 405 fits
+-------------------------Binary - Naive Bayes-------------------------NORMALIZED
+Mejores parametros Binary - Naive Bayes: {'classifier__alpha': 0.1, 'vectorizer__max_df': 0.75, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
+Mejor macro avg f1-score: 0.7902421918247922
+                        precision    recall  f1-score   support
+
+               Culture       1.00      0.90      0.95        10
+               Economy       0.83      0.88      0.85        33
+Science and technology       0.76      0.76      0.76        17
+                Sports       0.85      0.79      0.81        14
+
+              accuracy                           0.84        74
+             macro avg       0.86      0.83      0.84        74
+          weighted avg       0.84      0.84      0.84        74
+
+
+
+Fitting 5 folds for each of 81 candidates, totalling 405 fits
+-------------------------TF-IDF - Naive Bayes-------------------------NORMALIZED
+Mejores parametros TF-IDF - Naive Bayes: {'classifier__alpha': 0.1, 'vectorizer__max_df': 0.75, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
+Mejor macro avg f1-score: 0.763578151305554
+                        precision    recall  f1-score   support
+
+               Culture       1.00      0.60      0.75        10
+               Economy       0.71      0.88      0.78        33
+Science and technology       0.79      0.65      0.71        17
+                Sports       0.85      0.79      0.81        14
+
+              accuracy                           0.77        74
+             macro avg       0.83      0.73      0.76        74
+          weighted avg       0.79      0.77      0.77        74
+
+
+
+Tiempo de ejecución: 17.911800384521484 segundos

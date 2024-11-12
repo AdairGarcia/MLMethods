@@ -24,6 +24,8 @@ def generar_raw_corpus(data, target):
         df = pd.read_csv('corpus/raw_data_corpus.csv')
         proporcion_corpus(df)
     except FileNotFoundError:
+        data['Title'] = data['Title'].fillna('')
+        data['Content'] = data['Content'].fillna('')
         new_df = pd.DataFrame()
         new_df['Title + Content'] = data['Title'] + ' ' + data['Content']
         new_df['Target'] = target
@@ -213,3 +215,9 @@ def generar_vectorized_data():
 
     print(f'Representaciones vectorizadas guardadas con éxito')
 
+if __name__ == '__main__':
+    data, target = extraer_datos('corpus/raw data corpus.csv')
+    generar_raw_corpus(data, target)
+    generar_normalized_corpus()
+    generar_lemmatized_corpus()
+    generar_stop_words_removed_corpus()

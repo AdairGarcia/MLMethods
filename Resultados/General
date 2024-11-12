@@ -1,0 +1,197 @@
+#######################################-RAW-#######################################
+-------------------------Frequency - Logistic Regression-------------------------RAW
+Pipeline(steps=[('text_representation', CountVectorizer()),
+                ('classifier', LogisticRegression(max_iter=1000))])
+                        precision    recall  f1-score   support
+
+               Culture       1.00      0.30      0.46        10
+               Economy       0.79      0.94      0.86        33
+Science and technology       0.87      0.76      0.81        17
+                Sports       0.71      0.86      0.77        14
+
+              accuracy                           0.80        74
+             macro avg       0.84      0.72      0.73        74
+          weighted avg       0.82      0.80      0.78        74
+
+
+
+-------------------------Binary - Logistic Regression-------------------------RAW
+Pipeline(steps=[('text_representation', CountVectorizer(binary=True)),
+                ('classifier', LogisticRegression(max_iter=1000))])
+                        precision    recall  f1-score   support
+
+               Culture       1.00      0.30      0.46        10
+               Economy       0.78      0.97      0.86        33
+Science and technology       0.80      0.71      0.75        17
+                Sports       0.67      0.71      0.69        14
+
+              accuracy                           0.77        74
+             macro avg       0.81      0.67      0.69        74
+          weighted avg       0.79      0.77      0.75        74
+
+
+
+-------------------------TF-IDF - Logistic Regression-------------------------RAW
+Pipeline(steps=[('text_representation', TfidfVectorizer(max_df=0.9, min_df=2)),
+                ('classifier', LogisticRegression(max_iter=1000))])
+                        precision    recall  f1-score   support
+
+               Culture       1.00      0.30      0.46        10
+               Economy       0.61      0.94      0.74        33
+Science and technology       0.75      0.35      0.48        17
+                Sports       0.92      0.79      0.85        14
+
+              accuracy                           0.69        74
+             macro avg       0.82      0.59      0.63        74
+          weighted avg       0.75      0.69      0.66        74
+
+
+
+#######################################-LEMMATIZED-#######################################
+-------------------------Frequency - Logistic Regression-------------------------LEMMATIZED
+Pipeline(steps=[('text_representation', CountVectorizer()),
+                ('classifier', LogisticRegression(max_iter=1000))])
+                        precision    recall  f1-score   support
+
+               Culture       0.80      0.40      0.53        10
+               Economy       0.77      0.91      0.83        33
+Science and technology       0.82      0.82      0.82        17
+                Sports       0.85      0.79      0.81        14
+
+              accuracy                           0.80        74
+             macro avg       0.81      0.73      0.75        74
+          weighted avg       0.80      0.80      0.79        74
+
+
+
+-------------------------Binary - Logistic Regression-------------------------LEMMATIZED
+Pipeline(steps=[('text_representation', CountVectorizer(binary=True)),
+                ('classifier', LogisticRegression(max_iter=1000))])
+                        precision    recall  f1-score   support
+
+               Culture       1.00      0.30      0.46        10
+               Economy       0.73      0.91      0.81        33
+Science and technology       0.67      0.71      0.69        17
+                Sports       0.92      0.79      0.85        14
+
+              accuracy                           0.76        74
+             macro avg       0.83      0.68      0.70        74
+          weighted avg       0.79      0.76      0.74        74
+
+
+
+-------------------------TF-IDF - Logistic Regression-------------------------LEMMATIZED
+Pipeline(steps=[('text_representation', TfidfVectorizer(max_df=0.9, min_df=2)),
+                ('classifier', LogisticRegression(max_iter=1000))])
+                        precision    recall  f1-score   support
+
+               Culture       1.00      0.20      0.33        10
+               Economy       0.61      0.94      0.74        33
+Science and technology       0.78      0.41      0.54        17
+                Sports       0.92      0.79      0.85        14
+
+              accuracy                           0.69        74
+             macro avg       0.83      0.58      0.61        74
+          weighted avg       0.76      0.69      0.66        74
+
+
+
+#######################################-NO_STOP_WORDS-#######################################
+-------------------------Frequency - Logistic Regression-------------------------NO_STOP_WORDS
+Pipeline(steps=[('text_representation', CountVectorizer()),
+                ('classifier', LogisticRegression(max_iter=1000))])
+                        precision    recall  f1-score   support
+
+               Culture       1.00      0.30      0.46        10
+               Economy       0.71      0.97      0.82        33
+Science and technology       0.86      0.71      0.77        17
+                Sports       0.92      0.79      0.85        14
+
+              accuracy                           0.78        74
+             macro avg       0.87      0.69      0.73        74
+          weighted avg       0.82      0.78      0.77        74
+
+
+
+-------------------------Binary - Logistic Regression-------------------------NO_STOP_WORDS
+Pipeline(steps=[('text_representation', CountVectorizer(binary=True)),
+                ('classifier', LogisticRegression(max_iter=1000))])
+                        precision    recall  f1-score   support
+
+               Culture       1.00      0.40      0.57        10
+               Economy       0.73      0.97      0.83        33
+Science and technology       0.83      0.59      0.69        17
+                Sports       0.86      0.86      0.86        14
+
+              accuracy                           0.78        74
+             macro avg       0.85      0.70      0.74        74
+          weighted avg       0.81      0.78      0.77        74
+
+
+
+-------------------------TF-IDF - Logistic Regression-------------------------NO_STOP_WORDS
+Pipeline(steps=[('text_representation', TfidfVectorizer(max_df=0.9, min_df=2)),
+                ('classifier', LogisticRegression(max_iter=1000))])
+                        precision    recall  f1-score   support
+
+               Culture       1.00      0.30      0.46        10
+               Economy       0.59      0.97      0.74        33
+Science and technology       0.88      0.41      0.56        17
+                Sports       1.00      0.64      0.78        14
+
+              accuracy                           0.69        74
+             macro avg       0.87      0.58      0.63        74
+          weighted avg       0.79      0.69      0.67        74
+
+
+
+#######################################-NORMALIZED-#######################################
+-------------------------Frequency - Logistic Regression-------------------------NORMALIZED
+Pipeline(steps=[('text_representation', CountVectorizer()),
+                ('classifier', LogisticRegression(max_iter=1000))])
+                        precision    recall  f1-score   support
+
+               Culture       1.00      0.30      0.46        10
+               Economy       0.70      0.94      0.81        33
+Science and technology       0.81      0.76      0.79        17
+                Sports       1.00      0.79      0.88        14
+
+              accuracy                           0.78        74
+             macro avg       0.88      0.70      0.73        74
+          weighted avg       0.83      0.78      0.77        74
+
+
+
+-------------------------Binary - Logistic Regression-------------------------NORMALIZED
+Pipeline(steps=[('text_representation', CountVectorizer(binary=True)),
+                ('classifier', LogisticRegression(max_iter=1000))])
+                        precision    recall  f1-score   support
+
+               Culture       0.80      0.40      0.53        10
+               Economy       0.75      0.91      0.82        33
+Science and technology       0.75      0.71      0.73        17
+                Sports       0.92      0.86      0.89        14
+
+              accuracy                           0.78        74
+             macro avg       0.81      0.72      0.74        74
+          weighted avg       0.79      0.78      0.77        74
+
+
+
+-------------------------TF-IDF - Logistic Regression-------------------------NORMALIZED
+Pipeline(steps=[('text_representation', TfidfVectorizer(max_df=0.9, min_df=2)),
+                ('classifier', LogisticRegression(max_iter=1000))])
+                        precision    recall  f1-score   support
+
+               Culture       1.00      0.20      0.33        10
+               Economy       0.59      0.97      0.74        33
+Science and technology       0.86      0.35      0.50        17
+                Sports       1.00      0.79      0.88        14
+
+              accuracy                           0.69        74
+             macro avg       0.86      0.58      0.61        74
+          weighted avg       0.79      0.69      0.65        74
+
+
+
+

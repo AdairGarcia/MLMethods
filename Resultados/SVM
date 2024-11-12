@@ -1,0 +1,211 @@
+#######################################-RAW-#######################################
+Fitting 5 folds for each of 216 candidates, totalling 1080 fits
+-------------------------Frequency - Support Vector Machine-------------------------RAW
+Mejores parametros Frequency - Support Vector Machine: {'classifier__C': 0.1, 'classifier__kernel': 'linear', 'vectorizer__max_df': 0.95, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 2, 'vectorizer__ngram_range': (1, 1)}
+Mejor macro avg f1-score: 0.668571937518643
+                        precision    recall  f1-score   support
+
+               Culture       0.86      0.60      0.71        10
+               Economy       0.76      0.76      0.76        33
+Science and technology       0.65      0.88      0.75        17
+                Sports       0.91      0.71      0.80        14
+
+              accuracy                           0.76        74
+             macro avg       0.79      0.74      0.75        74
+          weighted avg       0.78      0.76      0.76        74
+
+
+
+Fitting 5 folds for each of 216 candidates, totalling 1080 fits
+-------------------------Binary - Support Vector Machine-------------------------RAW
+Mejores parametros Binary - Support Vector Machine: {'classifier__C': 0.1, 'classifier__kernel': 'linear', 'vectorizer__max_df': 0.75, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 2, 'vectorizer__ngram_range': (1, 1)}
+Mejor macro avg f1-score: 0.6709437803592246
+                        precision    recall  f1-score   support
+
+               Culture       0.71      0.50      0.59        10
+               Economy       0.74      0.88      0.81        33
+Science and technology       0.70      0.82      0.76        17
+                Sports       0.88      0.50      0.64        14
+
+              accuracy                           0.74        74
+             macro avg       0.76      0.68      0.70        74
+          weighted avg       0.75      0.74      0.73        74
+
+
+
+Fitting 5 folds for each of 216 candidates, totalling 1080 fits
+-------------------------TF-IDF - Support Vector Machine-------------------------RAW
+Mejores parametros TF-IDF - Support Vector Machine: {'classifier__C': 10, 'classifier__kernel': 'linear', 'vectorizer__max_df': 0.85, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
+Mejor macro avg f1-score: 0.707592797280461
+                        precision    recall  f1-score   support
+
+               Culture       1.00      0.70      0.82        10
+               Economy       0.72      0.88      0.79        33
+Science and technology       0.69      0.53      0.60        17
+                Sports       0.86      0.86      0.86        14
+
+              accuracy                           0.77        74
+             macro avg       0.82      0.74      0.77        74
+          weighted avg       0.78      0.77      0.77        74
+
+
+
+#######################################-LEMMATIZED-#######################################
+Fitting 5 folds for each of 216 candidates, totalling 1080 fits
+-------------------------Frequency - Support Vector Machine-------------------------LEMMATIZED
+Mejores parametros Frequency - Support Vector Machine: {'classifier__C': 1, 'classifier__kernel': 'linear', 'vectorizer__max_df': 0.85, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 2, 'vectorizer__ngram_range': (1, 1)}
+Mejor macro avg f1-score: 0.6772676793535508
+                        precision    recall  f1-score   support
+
+               Culture       0.78      0.70      0.74        10
+               Economy       0.85      0.85      0.85        33
+Science and technology       0.62      0.76      0.68        17
+                Sports       0.82      0.64      0.72        14
+
+              accuracy                           0.77        74
+             macro avg       0.77      0.74      0.75        74
+          weighted avg       0.78      0.77      0.77        74
+
+
+
+Fitting 5 folds for each of 216 candidates, totalling 1080 fits
+-------------------------Binary - Support Vector Machine-------------------------LEMMATIZED
+Mejores parametros Binary - Support Vector Machine: {'classifier__C': 0.1, 'classifier__kernel': 'linear', 'vectorizer__max_df': 0.75, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 2, 'vectorizer__ngram_range': (1, 1)}
+Mejor macro avg f1-score: 0.6931215195371276
+                        precision    recall  f1-score   support
+
+               Culture       1.00      0.60      0.75        10
+               Economy       0.78      0.94      0.85        33
+Science and technology       0.68      0.76      0.72        17
+                Sports       1.00      0.64      0.78        14
+
+              accuracy                           0.80        74
+             macro avg       0.86      0.74      0.78        74
+          weighted avg       0.83      0.80      0.79        74
+
+
+
+Fitting 5 folds for each of 216 candidates, totalling 1080 fits
+-------------------------TF-IDF - Support Vector Machine-------------------------LEMMATIZED
+Mejores parametros TF-IDF - Support Vector Machine: {'classifier__C': 10, 'classifier__kernel': 'linear', 'vectorizer__max_df': 0.75, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
+Mejor macro avg f1-score: 0.7353297007854437
+                        precision    recall  f1-score   support
+
+               Culture       1.00      0.70      0.82        10
+               Economy       0.81      0.91      0.86        33
+Science and technology       0.75      0.71      0.73        17
+                Sports       0.93      0.93      0.93        14
+
+              accuracy                           0.84        74
+             macro avg       0.87      0.81      0.83        74
+          weighted avg       0.84      0.84      0.84        74
+
+
+
+#######################################-NO_STOP_WORDS-#######################################
+Fitting 5 folds for each of 216 candidates, totalling 1080 fits
+-------------------------Frequency - Support Vector Machine-------------------------NO_STOP_WORDS
+Mejores parametros Frequency - Support Vector Machine: {'classifier__C': 1, 'classifier__kernel': 'linear', 'vectorizer__max_df': 0.75, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 2, 'vectorizer__ngram_range': (1, 1)}
+Mejor macro avg f1-score: 0.6564619782092691
+                        precision    recall  f1-score   support
+
+               Culture       0.86      0.60      0.71        10
+               Economy       0.79      0.91      0.85        33
+Science and technology       0.70      0.82      0.76        17
+                Sports       1.00      0.64      0.78        14
+
+              accuracy                           0.80        74
+             macro avg       0.84      0.74      0.77        74
+          weighted avg       0.82      0.80      0.79        74
+
+
+
+Fitting 5 folds for each of 216 candidates, totalling 1080 fits
+-------------------------Binary - Support Vector Machine-------------------------NO_STOP_WORDS
+Mejores parametros Binary - Support Vector Machine: {'classifier__C': 1, 'classifier__kernel': 'linear', 'vectorizer__max_df': 0.75, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 2, 'vectorizer__ngram_range': (1, 1)}
+Mejor macro avg f1-score: 0.6699643828712538
+                        precision    recall  f1-score   support
+
+               Culture       0.71      0.50      0.59        10
+               Economy       0.78      0.88      0.83        33
+Science and technology       0.65      0.76      0.70        17
+                Sports       1.00      0.71      0.83        14
+
+              accuracy                           0.77        74
+             macro avg       0.79      0.71      0.74        74
+          weighted avg       0.78      0.77      0.77        74
+
+
+
+Fitting 5 folds for each of 216 candidates, totalling 1080 fits
+-------------------------TF-IDF - Support Vector Machine-------------------------NO_STOP_WORDS
+Mejores parametros TF-IDF - Support Vector Machine: {'classifier__C': 1, 'classifier__kernel': 'linear', 'vectorizer__max_df': 0.75, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 2, 'vectorizer__ngram_range': (1, 1)}
+Mejor macro avg f1-score: 0.7086305084904405
+                        precision    recall  f1-score   support
+
+               Culture       1.00      0.70      0.82        10
+               Economy       0.76      0.94      0.84        33
+Science and technology       0.79      0.65      0.71        17
+                Sports       0.92      0.79      0.85        14
+
+              accuracy                           0.81        74
+             macro avg       0.86      0.77      0.80        74
+          weighted avg       0.83      0.81      0.81        74
+
+
+
+#######################################-NORMALIZED-#######################################
+Fitting 5 folds for each of 216 candidates, totalling 1080 fits
+-------------------------Frequency - Support Vector Machine-------------------------NORMALIZED
+Mejores parametros Frequency - Support Vector Machine: {'classifier__C': 1, 'classifier__kernel': 'linear', 'vectorizer__max_df': 0.75, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 2, 'vectorizer__ngram_range': (1, 1)}
+Mejor macro avg f1-score: 0.6994965150255751
+                        precision    recall  f1-score   support
+
+               Culture       0.86      0.60      0.71        10
+               Economy       0.83      0.88      0.85        33
+Science and technology       0.62      0.76      0.68        17
+                Sports       1.00      0.79      0.88        14
+
+              accuracy                           0.80        74
+             macro avg       0.83      0.76      0.78        74
+          weighted avg       0.82      0.80      0.80        74
+
+
+
+Fitting 5 folds for each of 216 candidates, totalling 1080 fits
+-------------------------Binary - Support Vector Machine-------------------------NORMALIZED
+Mejores parametros Binary - Support Vector Machine: {'classifier__C': 1, 'classifier__kernel': 'linear', 'vectorizer__max_df': 0.75, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 2, 'vectorizer__ngram_range': (1, 1)}
+Mejor macro avg f1-score: 0.7276217711939281
+                        precision    recall  f1-score   support
+
+               Culture       0.86      0.60      0.71        10
+               Economy       0.81      0.91      0.86        33
+Science and technology       0.68      0.76      0.72        17
+                Sports       1.00      0.79      0.88        14
+
+              accuracy                           0.81        74
+             macro avg       0.84      0.76      0.79        74
+          weighted avg       0.82      0.81      0.81        74
+
+
+
+Fitting 5 folds for each of 216 candidates, totalling 1080 fits
+-------------------------TF-IDF - Support Vector Machine-------------------------NORMALIZED
+Mejores parametros TF-IDF - Support Vector Machine: {'classifier__C': 10, 'classifier__kernel': 'linear', 'vectorizer__max_df': 0.75, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 2, 'vectorizer__ngram_range': (1, 1)}
+Mejor macro avg f1-score: 0.741632452065865
+                        precision    recall  f1-score   support
+
+               Culture       1.00      0.50      0.67        10
+               Economy       0.74      0.94      0.83        33
+Science and technology       0.79      0.65      0.71        17
+                Sports       0.92      0.86      0.89        14
+
+              accuracy                           0.80        74
+             macro avg       0.86      0.74      0.77        74
+          weighted avg       0.82      0.80      0.79        74
+
+
+
+Tiempo de ejecución: 63.84556007385254 segundos
+
+Process finished with exit code 0
