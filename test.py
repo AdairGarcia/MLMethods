@@ -8,6 +8,8 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.neural_network import MLPClassifier
 from sklearn.svm import SVC
+from sklearn.utils import compute_class_weight
+import numpy as np
 
 from methods import *
 
@@ -28,14 +30,14 @@ def test():
         # 'Logistic Regression': LogisticRegression(),
         # 'Naive Bayes': MultinomialNB(),
         # 'Support Vector Machine': SVC(),
-        'Multilayer Perceptron': MLPClassifier(max_iter=350),
+        'Multilayer Perceptron': MLPClassifier(early_stopping=True),
         # 'Random Forest': RandomForestClassifier(),
         # 'Gradient Boosting': GradientBoostingClassifier(),
     }
     text_representations = {
         'Frequency': CountVectorizer(),
         'Binary': CountVectorizer(binary=True),
-        'TF-IDF': TfidfVectorizer(max_df=0.9, min_df=2),
+        'TF-IDF': TfidfVectorizer(),
     }
     param_grids = {
         'Logistic Regression': {
@@ -49,9 +51,9 @@ def test():
             'classifier__kernel': ['linear', 'rbf']
         },
         'Multilayer Perceptron': {
-            'classifier__hidden_layer_sizes': [(50,), (100,), (50, 50)],
+            'classifier__hidden_layer_sizes': [(50,), (100,)],
             'classifier__activation': ['tanh', 'relu'],
-            'classifier__alpha': [0.0001, 0.001, 0.01]
+            'classifier__alpha': [0.01]
         },
         'Random Forest': {
             'classifier__n_estimators': [50, 100, 200],
@@ -83,11 +85,18 @@ def test():
 
                 param_grid = param_grids[model_name]
                 param_grid.update({
-                    'vectorizer__max_features': [5000, 10000, 20000],
+                    'vectorizer__max_features': [5000],
                     'vectorizer__ngram_range': [(1, 1)],
                     'vectorizer__max_df': [0.75, 0.85, 0.95],
                     'vectorizer__min_df': [1, 2, 5]
                 })
+
+                # Compute class weights
+                class_weights = compute_class_weight('balanced', classes=np.unique(y_train), y=y_train)
+                class_weight_dict = {i: class_weights[i] for i in range(len(class_weights))}
+
+                # Update the classifier with class weights
+                pipeline.set_params(classifier__class_weight=class_weight_dict)
 
                 grid_search = GridSearchCV(pipeline, param_grid, cv=5, scoring='f1_macro', n_jobs=-1, verbose=1)
                 grid_search.fit(x_train, y_train)
