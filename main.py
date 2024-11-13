@@ -163,8 +163,6 @@ def tfidf_vectorize(corpus):
     x = vector.fit_transform(corpus)
     return x
 
-
-
 # Función para aplicar SVD a una representación
 def apply_svd(x, n_components=50):
     svd = TruncatedSVD(n_components=n_components)

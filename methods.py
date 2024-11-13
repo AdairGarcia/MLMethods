@@ -2,7 +2,6 @@ import pandas as pd
 from sklearn.metrics import classification_report
 from sklearn.pipeline import Pipeline
 
-
 # funcion que utiliza pipelines de spacy para
 # el uso de modelos de machine learning
 def pipelines(x_train, y_train, x_test, y_test, text_representation, classifier, zero_division=0):
