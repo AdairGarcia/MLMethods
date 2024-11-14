@@ -1,7 +1,7 @@
 #######################################-RAW-#######################################
-Fitting 5 folds for each of 81 candidates, totalling 405 fits
+Fitting 5 folds for each of 27 candidates, totalling 135 fits
 -------------------------Frequency - Naive Bayes-------------------------RAW
-Mejores parametros Frequency - Naive Bayes: {'classifier__alpha': 0.1, 'vectorizer__max_df': 0.85, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
+Mejores parametros Frequency - Naive Bayes: {'classifier__alpha': 0.1, 'vectorizer__max_df': 0.85, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
 Mejor macro avg f1-score: 0.7706810915379283
                         precision    recall  f1-score   support
 
@@ -16,9 +16,9 @@ Science and technology       0.75      0.71      0.73        17
 
 
 
-Fitting 5 folds for each of 81 candidates, totalling 405 fits
+Fitting 5 folds for each of 27 candidates, totalling 135 fits
 -------------------------Binary - Naive Bayes-------------------------RAW
-Mejores parametros Binary - Naive Bayes: {'classifier__alpha': 0.1, 'vectorizer__max_df': 0.95, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
+Mejores parametros Binary - Naive Bayes: {'classifier__alpha': 0.1, 'vectorizer__max_df': 0.95, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
 Mejor macro avg f1-score: 0.7645851753785298
                         precision    recall  f1-score   support
 
@@ -33,9 +33,9 @@ Science and technology       0.80      0.71      0.75        17
 
 
 
-Fitting 5 folds for each of 81 candidates, totalling 405 fits
+Fitting 5 folds for each of 27 candidates, totalling 135 fits
 -------------------------TF-IDF - Naive Bayes-------------------------RAW
-Mejores parametros TF-IDF - Naive Bayes: {'classifier__alpha': 0.1, 'vectorizer__max_df': 0.75, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 2, 'vectorizer__ngram_range': (1, 1)}
+Mejores parametros TF-IDF - Naive Bayes: {'classifier__alpha': 0.1, 'vectorizer__max_df': 0.75, 'vectorizer__min_df': 2, 'vectorizer__ngram_range': (1, 1)}
 Mejor macro avg f1-score: 0.7350101828770181
                         precision    recall  f1-score   support
 
@@ -51,9 +51,9 @@ Science and technology       0.73      0.65      0.69        17
 
 
 #######################################-LEMMATIZED-#######################################
-Fitting 5 folds for each of 81 candidates, totalling 405 fits
+Fitting 5 folds for each of 27 candidates, totalling 135 fits
 -------------------------Frequency - Naive Bayes-------------------------LEMMATIZED
-Mejores parametros Frequency - Naive Bayes: {'classifier__alpha': 0.5, 'vectorizer__max_df': 0.85, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 2, 'vectorizer__ngram_range': (1, 1)}
+Mejores parametros Frequency - Naive Bayes: {'classifier__alpha': 0.5, 'vectorizer__max_df': 0.85, 'vectorizer__min_df': 2, 'vectorizer__ngram_range': (1, 1)}
 Mejor macro avg f1-score: 0.7910477128618554
                         precision    recall  f1-score   support
 
@@ -68,9 +68,9 @@ Science and technology       0.71      0.71      0.71        17
 
 
 
-Fitting 5 folds for each of 81 candidates, totalling 405 fits
+Fitting 5 folds for each of 27 candidates, totalling 135 fits
 -------------------------Binary - Naive Bayes-------------------------LEMMATIZED
-Mejores parametros Binary - Naive Bayes: {'classifier__alpha': 0.1, 'vectorizer__max_df': 0.75, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
+Mejores parametros Binary - Naive Bayes: {'classifier__alpha': 0.1, 'vectorizer__max_df': 0.75, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
 Mejor macro avg f1-score: 0.7967393371626066
                         precision    recall  f1-score   support
 
@@ -85,9 +85,9 @@ Science and technology       0.76      0.76      0.76        17
 
 
 
-Fitting 5 folds for each of 81 candidates, totalling 405 fits
+Fitting 5 folds for each of 27 candidates, totalling 135 fits
 -------------------------TF-IDF - Naive Bayes-------------------------LEMMATIZED
-Mejores parametros TF-IDF - Naive Bayes: {'classifier__alpha': 0.1, 'vectorizer__max_df': 0.85, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
+Mejores parametros TF-IDF - Naive Bayes: {'classifier__alpha': 0.1, 'vectorizer__max_df': 0.85, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
 Mejor macro avg f1-score: 0.7550811412455308
                         precision    recall  f1-score   support
 
@@ -103,9 +103,9 @@ Science and technology       0.85      0.65      0.73        17
 
 
 #######################################-NO_STOP_WORDS-#######################################
-Fitting 5 folds for each of 81 candidates, totalling 405 fits
+Fitting 5 folds for each of 27 candidates, totalling 135 fits
 -------------------------Frequency - Naive Bayes-------------------------NO_STOP_WORDS
-Mejores parametros Frequency - Naive Bayes: {'classifier__alpha': 0.1, 'vectorizer__max_df': 0.75, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
+Mejores parametros Frequency - Naive Bayes: {'classifier__alpha': 0.1, 'vectorizer__max_df': 0.75, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
 Mejor macro avg f1-score: 0.7786109305995665
                         precision    recall  f1-score   support
 
@@ -120,9 +120,9 @@ Science and technology       0.79      0.65      0.71        17
 
 
 
-Fitting 5 folds for each of 81 candidates, totalling 405 fits
+Fitting 5 folds for each of 27 candidates, totalling 135 fits
 -------------------------Binary - Naive Bayes-------------------------NO_STOP_WORDS
-Mejores parametros Binary - Naive Bayes: {'classifier__alpha': 0.1, 'vectorizer__max_df': 0.75, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
+Mejores parametros Binary - Naive Bayes: {'classifier__alpha': 0.1, 'vectorizer__max_df': 0.75, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
 Mejor macro avg f1-score: 0.7685297788539812
                         precision    recall  f1-score   support
 
@@ -137,9 +137,9 @@ Science and technology       0.73      0.65      0.69        17
 
 
 
-Fitting 5 folds for each of 81 candidates, totalling 405 fits
+Fitting 5 folds for each of 27 candidates, totalling 135 fits
 -------------------------TF-IDF - Naive Bayes-------------------------NO_STOP_WORDS
-Mejores parametros TF-IDF - Naive Bayes: {'classifier__alpha': 0.1, 'vectorizer__max_df': 0.75, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
+Mejores parametros TF-IDF - Naive Bayes: {'classifier__alpha': 0.1, 'vectorizer__max_df': 0.75, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
 Mejor macro avg f1-score: 0.754628162447144
                         precision    recall  f1-score   support
 
@@ -155,9 +155,9 @@ Science and technology       0.79      0.65      0.71        17
 
 
 #######################################-NORMALIZED-#######################################
-Fitting 5 folds for each of 81 candidates, totalling 405 fits
+Fitting 5 folds for each of 27 candidates, totalling 135 fits
 -------------------------Frequency - Naive Bayes-------------------------NORMALIZED
-Mejores parametros Frequency - Naive Bayes: {'classifier__alpha': 0.1, 'vectorizer__max_df': 0.75, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
+Mejores parametros Frequency - Naive Bayes: {'classifier__alpha': 0.1, 'vectorizer__max_df': 0.75, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
 Mejor macro avg f1-score: 0.7945862977602107
                         precision    recall  f1-score   support
 
@@ -172,9 +172,9 @@ Science and technology       0.78      0.82      0.80        17
 
 
 
-Fitting 5 folds for each of 81 candidates, totalling 405 fits
+Fitting 5 folds for each of 27 candidates, totalling 135 fits
 -------------------------Binary - Naive Bayes-------------------------NORMALIZED
-Mejores parametros Binary - Naive Bayes: {'classifier__alpha': 0.1, 'vectorizer__max_df': 0.75, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
+Mejores parametros Binary - Naive Bayes: {'classifier__alpha': 0.1, 'vectorizer__max_df': 0.75, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
 Mejor macro avg f1-score: 0.7902421918247922
                         precision    recall  f1-score   support
 
@@ -189,9 +189,9 @@ Science and technology       0.76      0.76      0.76        17
 
 
 
-Fitting 5 folds for each of 81 candidates, totalling 405 fits
+Fitting 5 folds for each of 27 candidates, totalling 135 fits
 -------------------------TF-IDF - Naive Bayes-------------------------NORMALIZED
-Mejores parametros TF-IDF - Naive Bayes: {'classifier__alpha': 0.1, 'vectorizer__max_df': 0.75, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
+Mejores parametros TF-IDF - Naive Bayes: {'classifier__alpha': 0.1, 'vectorizer__max_df': 0.75, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
 Mejor macro avg f1-score: 0.763578151305554
                         precision    recall  f1-score   support
 
@@ -206,4 +206,6 @@ Science and technology       0.79      0.65      0.71        17
 
 
 
-Tiempo de ejecución: 17.911800384521484 segundos
+Tiempo de ejecución: 10.57164716720581 segundos
+
+Process finished with exit code 0

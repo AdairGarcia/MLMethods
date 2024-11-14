@@ -1,421 +1,211 @@
 #######################################-RAW-#######################################
 Fitting 5 folds for each of 36 candidates, totalling 180 fits
 -------------------------Frequency - Multilayer Perceptron-------------------------RAW
-Mejores parametros Frequency - Multilayer Perceptron: {'classifier__activation': 'tanh', 'classifier__alpha': 0.01, 'classifier__hidden_layer_sizes': (100,), 'vectorizer__max_df': 0.75, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
-Mejor macro avg f1-score: 0.6572040170676615
+Mejores parametros Frequency - Multilayer Perceptron: {'classifier__activation': 'tanh', 'classifier__alpha': 0.01, 'classifier__hidden_layer_sizes': (100,), 'vectorizer__max_df': 0.85, 'vectorizer__min_df': 2, 'vectorizer__ngram_range': (1, 1)}
+Mejor macro avg f1-score: 0.6192834472323583
                         precision    recall  f1-score   support
 
-               Culture       1.00      0.20      0.33        10
-               Economy       0.55      0.94      0.70        33
-Science and technology       0.71      0.29      0.42        17
-                Sports       1.00      0.64      0.78        14
+               Culture       0.83      0.50      0.62        10
+               Economy       0.68      0.85      0.76        33
+Science and technology       0.67      0.71      0.69        17
+                Sports       0.89      0.57      0.70        14
 
-              accuracy                           0.64        74
-             macro avg       0.82      0.52      0.56        74
-          weighted avg       0.74      0.64      0.60        74
+              accuracy                           0.72        74
+             macro avg       0.77      0.66      0.69        74
+          weighted avg       0.74      0.72      0.71        74
 
 
 
 Fitting 5 folds for each of 36 candidates, totalling 180 fits
 -------------------------Binary - Multilayer Perceptron-------------------------RAW
-Mejores parametros Binary - Multilayer Perceptron: {'classifier__activation': 'tanh', 'classifier__alpha': 0.01, 'classifier__hidden_layer_sizes': (100,), 'vectorizer__max_df': 0.95, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 2, 'vectorizer__ngram_range': (1, 1)}
-Mejor macro avg f1-score: 0.6515795211865602
+Mejores parametros Binary - Multilayer Perceptron: {'classifier__activation': 'relu', 'classifier__alpha': 0.01, 'classifier__hidden_layer_sizes': (50,), 'vectorizer__max_df': 0.75, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
+Mejor macro avg f1-score: 0.6449373279197177
                         precision    recall  f1-score   support
 
-               Culture       0.67      0.40      0.50        10
-               Economy       0.64      0.91      0.75        33
-Science and technology       0.77      0.59      0.67        17
-                Sports       0.88      0.50      0.64        14
+               Culture       0.17      0.10      0.12        10
+               Economy       0.52      0.94      0.67        33
+Science and technology       1.00      0.12      0.21        17
+                Sports       0.83      0.36      0.50        14
 
-              accuracy                           0.69        74
-             macro avg       0.74      0.60      0.64        74
-          weighted avg       0.72      0.69      0.68        74
+              accuracy                           0.53        74
+             macro avg       0.63      0.38      0.38        74
+          weighted avg       0.64      0.53      0.46        74
 
 
 
 Fitting 5 folds for each of 36 candidates, totalling 180 fits
 -------------------------TF-IDF - Multilayer Perceptron-------------------------RAW
-Mejores parametros TF-IDF - Multilayer Perceptron: {'classifier__activation': 'tanh', 'classifier__alpha': 0.01, 'classifier__hidden_layer_sizes': (100,), 'vectorizer__max_df': 0.75, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
-Mejor macro avg f1-score: 0.5000344248682287
+Mejores parametros TF-IDF - Multilayer Perceptron: {'classifier__activation': 'relu', 'classifier__alpha': 0.01, 'classifier__hidden_layer_sizes': (100,), 'vectorizer__max_df': 0.75, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
+Mejor macro avg f1-score: 0.4896290676375257
                         precision    recall  f1-score   support
 
-               Culture       1.00      0.30      0.46        10
-               Economy       0.52      1.00      0.69        33
-Science and technology       0.00      0.00      0.00        17
-                Sports       1.00      0.57      0.73        14
+               Culture       1.00      0.50      0.67        10
+               Economy       0.73      0.91      0.81        33
+Science and technology       0.77      0.59      0.67        17
+                Sports       0.87      0.93      0.90        14
 
-              accuracy                           0.59        74
-             macro avg       0.63      0.47      0.47        74
-          weighted avg       0.56      0.59      0.51        74
+              accuracy                           0.78        74
+             macro avg       0.84      0.73      0.76        74
+          weighted avg       0.80      0.78      0.77        74
 
 
 
 #######################################-LEMMATIZED-#######################################
 Fitting 5 folds for each of 36 candidates, totalling 180 fits
 -------------------------Frequency - Multilayer Perceptron-------------------------LEMMATIZED
-Mejores parametros Frequency - Multilayer Perceptron: {'classifier__activation': 'tanh', 'classifier__alpha': 0.01, 'classifier__hidden_layer_sizes': (100,), 'vectorizer__max_df': 0.95, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 2, 'vectorizer__ngram_range': (1, 1)}
-Mejor macro avg f1-score: 0.703879348525841
+Mejores parametros Frequency - Multilayer Perceptron: {'classifier__activation': 'relu', 'classifier__alpha': 0.01, 'classifier__hidden_layer_sizes': (100,), 'vectorizer__max_df': 0.95, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
+Mejor macro avg f1-score: 0.6578200399601636
                         precision    recall  f1-score   support
 
-               Culture       0.86      0.60      0.71        10
-               Economy       0.77      0.91      0.83        33
-Science and technology       0.69      0.65      0.67        17
-                Sports       0.83      0.71      0.77        14
+               Culture       1.00      0.40      0.57        10
+               Economy       0.69      0.94      0.79        33
+Science and technology       0.79      0.65      0.71        17
+                Sports       0.91      0.71      0.80        14
 
-              accuracy                           0.77        74
-             macro avg       0.79      0.72      0.74        74
-          weighted avg       0.77      0.77      0.77        74
+              accuracy                           0.76        74
+             macro avg       0.85      0.68      0.72        74
+          weighted avg       0.79      0.76      0.75        74
 
 
 
 Fitting 5 folds for each of 36 candidates, totalling 180 fits
 -------------------------Binary - Multilayer Perceptron-------------------------LEMMATIZED
-Mejores parametros Binary - Multilayer Perceptron: {'classifier__activation': 'tanh', 'classifier__alpha': 0.01, 'classifier__hidden_layer_sizes': (100,), 'vectorizer__max_df': 0.95, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
-Mejor macro avg f1-score: 0.6423524901777409
+Mejores parametros Binary - Multilayer Perceptron: {'classifier__activation': 'tanh', 'classifier__alpha': 0.01, 'classifier__hidden_layer_sizes': (100,), 'vectorizer__max_df': 0.75, 'vectorizer__min_df': 2, 'vectorizer__ngram_range': (1, 1)}
+Mejor macro avg f1-score: 0.6742027929305191
                         precision    recall  f1-score   support
 
-               Culture       1.00      0.50      0.67        10
-               Economy       0.70      0.97      0.81        33
-Science and technology       0.79      0.65      0.71        17
-                Sports       1.00      0.64      0.78        14
+               Culture       1.00      0.30      0.46        10
+               Economy       0.66      0.94      0.78        33
+Science and technology       0.69      0.53      0.60        17
+                Sports       0.91      0.71      0.80        14
 
-              accuracy                           0.77        74
-             macro avg       0.87      0.69      0.74        74
-          weighted avg       0.82      0.77      0.76        74
+              accuracy                           0.72        74
+             macro avg       0.82      0.62      0.66        74
+          weighted avg       0.76      0.72      0.70        74
 
 
 
 Fitting 5 folds for each of 36 candidates, totalling 180 fits
 -------------------------TF-IDF - Multilayer Perceptron-------------------------LEMMATIZED
-Mejores parametros TF-IDF - Multilayer Perceptron: {'classifier__activation': 'relu', 'classifier__alpha': 0.01, 'classifier__hidden_layer_sizes': (100,), 'vectorizer__max_df': 0.85, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
-Mejor macro avg f1-score: 0.5459492550153493
+Mejores parametros TF-IDF - Multilayer Perceptron: {'classifier__activation': 'tanh', 'classifier__alpha': 0.01, 'classifier__hidden_layer_sizes': (50,), 'vectorizer__max_df': 0.75, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
+Mejor macro avg f1-score: 0.5673923671767838
                         precision    recall  f1-score   support
 
                Culture       0.00      0.00      0.00        10
-               Economy       0.46      1.00      0.63        33
-Science and technology       0.00      0.00      0.00        17
-                Sports       1.00      0.21      0.35        14
+               Economy       0.54      0.97      0.70        33
+Science and technology       0.83      0.29      0.43        17
+                Sports       1.00      0.64      0.78        14
 
-              accuracy                           0.49        74
-             macro avg       0.37      0.30      0.25        74
-          weighted avg       0.40      0.49      0.35        74
+              accuracy                           0.62        74
+             macro avg       0.59      0.48      0.48        74
+          weighted avg       0.62      0.62      0.56        74
 
 
 
 #######################################-NO_STOP_WORDS-#######################################
 Fitting 5 folds for each of 36 candidates, totalling 180 fits
 -------------------------Frequency - Multilayer Perceptron-------------------------NO_STOP_WORDS
-Mejores parametros Frequency - Multilayer Perceptron: {'classifier__activation': 'tanh', 'classifier__alpha': 0.01, 'classifier__hidden_layer_sizes': (100,), 'vectorizer__max_df': 0.85, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
-Mejor macro avg f1-score: 0.6377758831241265
+Mejores parametros Frequency - Multilayer Perceptron: {'classifier__activation': 'relu', 'classifier__alpha': 0.01, 'classifier__hidden_layer_sizes': (100,), 'vectorizer__max_df': 0.75, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
+Mejor macro avg f1-score: 0.6807432652725731
                         precision    recall  f1-score   support
 
-               Culture       1.00      0.30      0.46        10
-               Economy       0.63      0.97      0.76        33
-Science and technology       0.90      0.53      0.67        17
-                Sports       0.80      0.57      0.67        14
+               Culture       1.00      0.20      0.33        10
+               Economy       0.61      0.94      0.74        33
+Science and technology       0.80      0.47      0.59        17
+                Sports       0.91      0.71      0.80        14
 
-              accuracy                           0.70        74
-             macro avg       0.83      0.59      0.64        74
-          weighted avg       0.77      0.70      0.68        74
+              accuracy                           0.69        74
+             macro avg       0.83      0.58      0.62        74
+          weighted avg       0.76      0.69      0.66        74
 
 
 
 Fitting 5 folds for each of 36 candidates, totalling 180 fits
 -------------------------Binary - Multilayer Perceptron-------------------------NO_STOP_WORDS
-Mejores parametros Binary - Multilayer Perceptron: {'classifier__activation': 'tanh', 'classifier__alpha': 0.01, 'classifier__hidden_layer_sizes': (100,), 'vectorizer__max_df': 0.85, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
-Mejor macro avg f1-score: 0.6625978021677541
+Mejores parametros Binary - Multilayer Perceptron: {'classifier__activation': 'tanh', 'classifier__alpha': 0.01, 'classifier__hidden_layer_sizes': (50,), 'vectorizer__max_df': 0.95, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
+Mejor macro avg f1-score: 0.6364937359818427
                         precision    recall  f1-score   support
 
-               Culture       0.75      0.30      0.43        10
-               Economy       0.65      0.97      0.78        33
+               Culture       1.00      0.40      0.57        10
+               Economy       0.60      0.97      0.74        33
+Science and technology       1.00      0.29      0.45        17
+                Sports       0.83      0.71      0.77        14
+
+              accuracy                           0.69        74
+             macro avg       0.86      0.59      0.63        74
+          weighted avg       0.79      0.69      0.66        74
+
+
+
+Fitting 5 folds for each of 36 candidates, totalling 180 fits
+-------------------------TF-IDF - Multilayer Perceptron-------------------------NO_STOP_WORDS
+Mejores parametros TF-IDF - Multilayer Perceptron: {'classifier__activation': 'relu', 'classifier__alpha': 0.01, 'classifier__hidden_layer_sizes': (100,), 'vectorizer__max_df': 0.95, 'vectorizer__min_df': 2, 'vectorizer__ngram_range': (1, 1)}
+Mejor macro avg f1-score: 0.5280134018171798
+                        precision    recall  f1-score   support
+
+               Culture       0.67      0.40      0.50        10
+               Economy       0.69      0.94      0.79        33
+Science and technology       0.77      0.59      0.67        17
+                Sports       0.90      0.64      0.75        14
+
+              accuracy                           0.73        74
+             macro avg       0.76      0.64      0.68        74
+          weighted avg       0.74      0.73      0.72        74
+
+
+
+#######################################-NORMALIZED-#######################################
+Fitting 5 folds for each of 36 candidates, totalling 180 fits
+-------------------------Frequency - Multilayer Perceptron-------------------------NORMALIZED
+Mejores parametros Frequency - Multilayer Perceptron: {'classifier__activation': 'tanh', 'classifier__alpha': 0.01, 'classifier__hidden_layer_sizes': (50,), 'vectorizer__max_df': 0.75, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
+Mejor macro avg f1-score: 0.6881536905472094
+                        precision    recall  f1-score   support
+
+               Culture       1.00      0.30      0.46        10
+               Economy       0.63      0.94      0.76        33
+Science and technology       0.82      0.53      0.64        17
+                Sports       0.91      0.71      0.80        14
+
+              accuracy                           0.72        74
+             macro avg       0.84      0.62      0.67        74
+          weighted avg       0.78      0.72      0.70        74
+
+
+
+Fitting 5 folds for each of 36 candidates, totalling 180 fits
+-------------------------Binary - Multilayer Perceptron-------------------------NORMALIZED
+Mejores parametros Binary - Multilayer Perceptron: {'classifier__activation': 'tanh', 'classifier__alpha': 0.01, 'classifier__hidden_layer_sizes': (100,), 'vectorizer__max_df': 0.75, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
+Mejor macro avg f1-score: 0.6661529649539737
+                        precision    recall  f1-score   support
+
+               Culture       1.00      0.30      0.46        10
+               Economy       0.64      0.97      0.77        33
 Science and technology       0.90      0.53      0.67        17
                 Sports       0.91      0.71      0.80        14
 
               accuracy                           0.73        74
-             macro avg       0.80      0.63      0.67        74
-          weighted avg       0.77      0.73      0.71        74
-
-
-
-Fitting 5 folds for each of 36 candidates, totalling 180 fits
--------------------------TF-IDF - Multilayer Perceptron-------------------------NO_STOP_WORDS
-Mejores parametros TF-IDF - Multilayer Perceptron: {'classifier__activation': 'tanh', 'classifier__alpha': 0.01, 'classifier__hidden_layer_sizes': (50,), 'vectorizer__max_df': 0.95, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
-Mejor macro avg f1-score: 0.5578371806169626
-                        precision    recall  f1-score   support
-
-               Culture       0.50      0.70      0.58        10
-               Economy       0.82      0.85      0.84        33
-Science and technology       0.72      0.76      0.74        17
-                Sports       1.00      0.57      0.73        14
-
-              accuracy                           0.76        74
-             macro avg       0.76      0.72      0.72        74
-          weighted avg       0.79      0.76      0.76        74
-
-
-
-#######################################-NORMALIZED-#######################################
-Fitting 5 folds for each of 36 candidates, totalling 180 fits
--------------------------Frequency - Multilayer Perceptron-------------------------NORMALIZED
-Mejores parametros Frequency - Multilayer Perceptron: {'classifier__activation': 'tanh', 'classifier__alpha': 0.01, 'classifier__hidden_layer_sizes': (100,), 'vectorizer__max_df': 0.95, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 2, 'vectorizer__ngram_range': (1, 1)}
-Mejor macro avg f1-score: 0.6831693991784279
-                        precision    recall  f1-score   support
-
-               Culture       1.00      0.50      0.67        10
-               Economy       0.74      0.94      0.83        33
-Science and technology       0.65      0.65      0.65        17
-                Sports       1.00      0.71      0.83        14
-
-              accuracy                           0.77        74
-             macro avg       0.85      0.70      0.74        74
-          weighted avg       0.80      0.77      0.77        74
-
-
-
-Fitting 5 folds for each of 36 candidates, totalling 180 fits
--------------------------Binary - Multilayer Perceptron-------------------------NORMALIZED
-Mejores parametros Binary - Multilayer Perceptron: {'classifier__activation': 'tanh', 'classifier__alpha': 0.01, 'classifier__hidden_layer_sizes': (50,), 'vectorizer__max_df': 0.95, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 2, 'vectorizer__ngram_range': (1, 1)}
-Mejor macro avg f1-score: 0.6686594104289204
-                        precision    recall  f1-score   support
-
-               Culture       1.00      0.10      0.18        10
-               Economy       0.56      0.91      0.69        33
-Science and technology       1.00      0.12      0.21        17
-                Sports       0.65      0.79      0.71        14
-
-              accuracy                           0.59        74
-             macro avg       0.80      0.48      0.45        74
-          weighted avg       0.74      0.59      0.51        74
+             macro avg       0.86      0.63      0.67        74
+          weighted avg       0.80      0.73      0.71        74
 
 
 
 Fitting 5 folds for each of 36 candidates, totalling 180 fits
 -------------------------TF-IDF - Multilayer Perceptron-------------------------NORMALIZED
-Mejores parametros TF-IDF - Multilayer Perceptron: {'classifier__activation': 'tanh', 'classifier__alpha': 0.01, 'classifier__hidden_layer_sizes': (50,), 'vectorizer__max_df': 0.95, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
-Mejor macro avg f1-score: 0.5830810710992285
-                        precision    recall  f1-score   support
-
-               Culture       1.00      0.10      0.18        10
-               Economy       0.67      0.88      0.76        33
-Science and technology       0.67      0.82      0.74        17
-                Sports       0.89      0.57      0.70        14
-
-              accuracy                           0.70        74
-             macro avg       0.81      0.59      0.59        74
-          weighted avg       0.76      0.70      0.67        74
-
-
-
-Tiempo de ejecución: 655.4706823825836 segundos
-
-------------------------
-
-#######################################-RAW-#######################################
-Fitting 5 folds for each of 36 candidates, totalling 180 fits
--------------------------Frequency - Multilayer Perceptron-------------------------RAW
-Mejores parametros Frequency - Multilayer Perceptron: {'classifier__activation': 'relu', 'classifier__alpha': 0.01, 'classifier__hidden_layer_sizes': (50,), 'vectorizer__max_df': 0.95, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
-Mejor macro avg f1-score: 0.6005539468858764
-                        precision    recall  f1-score   support
-
-               Culture       1.00      0.30      0.46        10
-               Economy       0.64      0.91      0.75        33
-Science and technology       0.67      0.59      0.62        17
-                Sports       0.89      0.57      0.70        14
-
-              accuracy                           0.69        74
-             macro avg       0.80      0.59      0.63        74
-          weighted avg       0.74      0.69      0.67        74
-
-
-
-Fitting 5 folds for each of 36 candidates, totalling 180 fits
--------------------------Binary - Multilayer Perceptron-------------------------RAW
-Mejores parametros Binary - Multilayer Perceptron: {'classifier__activation': 'tanh', 'classifier__alpha': 0.01, 'classifier__hidden_layer_sizes': (100,), 'vectorizer__max_df': 0.85, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 2, 'vectorizer__ngram_range': (1, 1)}
-Mejor macro avg f1-score: 0.6460615540032602
-                        precision    recall  f1-score   support
-
-               Culture       0.83      0.50      0.62        10
-               Economy       0.73      0.91      0.81        33
-Science and technology       0.69      0.65      0.67        17
-                Sports       0.91      0.71      0.80        14
-
-              accuracy                           0.76        74
-             macro avg       0.79      0.69      0.73        74
-          weighted avg       0.77      0.76      0.75        74
-
-
-
-Fitting 5 folds for each of 36 candidates, totalling 180 fits
--------------------------TF-IDF - Multilayer Perceptron-------------------------RAW
-Mejores parametros TF-IDF - Multilayer Perceptron: {'classifier__activation': 'relu', 'classifier__alpha': 0.01, 'classifier__hidden_layer_sizes': (100,), 'vectorizer__max_df': 0.95, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
-Mejor macro avg f1-score: 0.47260511541322126
-                        precision    recall  f1-score   support
-
-               Culture       1.00      0.40      0.57        10
-               Economy       0.74      0.85      0.79        33
-Science and technology       0.60      0.71      0.65        17
-                Sports       0.92      0.79      0.85        14
-
-              accuracy                           0.74        74
-             macro avg       0.81      0.69      0.71        74
-          weighted avg       0.77      0.74      0.74        74
-
-
-
-#######################################-LEMMATIZED-#######################################
-Fitting 5 folds for each of 36 candidates, totalling 180 fits
--------------------------Frequency - Multilayer Perceptron-------------------------LEMMATIZED
-Mejores parametros Frequency - Multilayer Perceptron: {'classifier__activation': 'tanh', 'classifier__alpha': 0.01, 'classifier__hidden_layer_sizes': (100,), 'vectorizer__max_df': 0.85, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
-Mejor macro avg f1-score: 0.6569903359370262
-                        precision    recall  f1-score   support
-
-               Culture       1.00      0.50      0.67        10
-               Economy       0.66      0.94      0.78        33
-Science and technology       0.75      0.53      0.62        17
-                Sports       1.00      0.71      0.83        14
-
-              accuracy                           0.74        74
-             macro avg       0.85      0.67      0.72        74
-          weighted avg       0.79      0.74      0.74        74
-
-
-
-Fitting 5 folds for each of 36 candidates, totalling 180 fits
--------------------------Binary - Multilayer Perceptron-------------------------LEMMATIZED
-Mejores parametros Binary - Multilayer Perceptron: {'classifier__activation': 'tanh', 'classifier__alpha': 0.01, 'classifier__hidden_layer_sizes': (100,), 'vectorizer__max_df': 0.85, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
-Mejor macro avg f1-score: 0.673274580061517
-                        precision    recall  f1-score   support
-
-               Culture       1.00      0.60      0.75        10
-               Economy       0.68      0.97      0.80        33
-Science and technology       0.92      0.65      0.76        17
-                Sports       1.00      0.64      0.78        14
-
-              accuracy                           0.78        74
-             macro avg       0.90      0.71      0.77        74
-          weighted avg       0.84      0.78      0.78        74
-
-
-
-Fitting 5 folds for each of 36 candidates, totalling 180 fits
--------------------------TF-IDF - Multilayer Perceptron-------------------------LEMMATIZED
-Mejores parametros TF-IDF - Multilayer Perceptron: {'classifier__activation': 'relu', 'classifier__alpha': 0.01, 'classifier__hidden_layer_sizes': (50,), 'vectorizer__max_df': 0.85, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
-Mejor macro avg f1-score: 0.46407020617881417
-                        precision    recall  f1-score   support
-
-               Culture       0.75      0.30      0.43        10
-               Economy       0.46      0.97      0.62        33
-Science and technology       0.00      0.00      0.00        17
-                Sports       0.00      0.00      0.00        14
-
-              accuracy                           0.47        74
-             macro avg       0.30      0.32      0.26        74
-          weighted avg       0.31      0.47      0.34        74
-
-
-
-#######################################-NO_STOP_WORDS-#######################################
-Fitting 5 folds for each of 36 candidates, totalling 180 fits
--------------------------Frequency - Multilayer Perceptron-------------------------NO_STOP_WORDS
-Mejores parametros Frequency - Multilayer Perceptron: {'classifier__activation': 'tanh', 'classifier__alpha': 0.01, 'classifier__hidden_layer_sizes': (50,), 'vectorizer__max_df': 0.75, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
-Mejor macro avg f1-score: 0.6705719825248128
-                        precision    recall  f1-score   support
-
-               Culture       0.40      0.20      0.27        10
-               Economy       0.63      0.88      0.73        33
-Science and technology       0.73      0.47      0.57        17
-                Sports       0.67      0.57      0.62        14
-
-              accuracy                           0.64        74
-             macro avg       0.61      0.53      0.55        74
-          weighted avg       0.63      0.64      0.61        74
-
-
-
-Fitting 5 folds for each of 36 candidates, totalling 180 fits
--------------------------Binary - Multilayer Perceptron-------------------------NO_STOP_WORDS
-Mejores parametros Binary - Multilayer Perceptron: {'classifier__activation': 'tanh', 'classifier__alpha': 0.01, 'classifier__hidden_layer_sizes': (100,), 'vectorizer__max_df': 0.95, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
-Mejor macro avg f1-score: 0.6780930554900151
-                        precision    recall  f1-score   support
-
-               Culture       0.50      0.50      0.50        10
-               Economy       0.79      0.94      0.86        33
-Science and technology       0.77      0.59      0.67        17
-                Sports       0.92      0.79      0.85        14
-
-              accuracy                           0.77        74
-             macro avg       0.75      0.70      0.72        74
-          weighted avg       0.77      0.77      0.76        74
-
-
-
-Fitting 5 folds for each of 36 candidates, totalling 180 fits
--------------------------TF-IDF - Multilayer Perceptron-------------------------NO_STOP_WORDS
-Mejores parametros TF-IDF - Multilayer Perceptron: {'classifier__activation': 'tanh', 'classifier__alpha': 0.01, 'classifier__hidden_layer_sizes': (100,), 'vectorizer__max_df': 0.85, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
-Mejor macro avg f1-score: 0.6042285064442002
+Mejores parametros TF-IDF - Multilayer Perceptron: {'classifier__activation': 'tanh', 'classifier__alpha': 0.01, 'classifier__hidden_layer_sizes': (50,), 'vectorizer__max_df': 0.95, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
+Mejor macro avg f1-score: 0.5288682286535924
                         precision    recall  f1-score   support
 
                Culture       0.00      0.00      0.00        10
-               Economy       0.72      0.88      0.79        33
-Science and technology       0.61      0.82      0.70        17
-                Sports       0.82      0.64      0.72        14
-
-              accuracy                           0.70        74
-             macro avg       0.54      0.59      0.55        74
-          weighted avg       0.62      0.70      0.65        74
-
-
-
-#######################################-NORMALIZED-#######################################
-Fitting 5 folds for each of 36 candidates, totalling 180 fits
--------------------------Frequency - Multilayer Perceptron-------------------------NORMALIZED
-Mejores parametros Frequency - Multilayer Perceptron: {'classifier__activation': 'tanh', 'classifier__alpha': 0.01, 'classifier__hidden_layer_sizes': (100,), 'vectorizer__max_df': 0.85, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
-Mejor macro avg f1-score: 0.733831264858651
-                        precision    recall  f1-score   support
-
-               Culture       1.00      0.30      0.46        10
-               Economy       0.64      0.88      0.74        33
-Science and technology       0.69      0.53      0.60        17
-                Sports       0.85      0.79      0.81        14
-
-              accuracy                           0.70        74
-             macro avg       0.80      0.62      0.65        74
-          weighted avg       0.74      0.70      0.69        74
-
-
-
-Fitting 5 folds for each of 36 candidates, totalling 180 fits
--------------------------Binary - Multilayer Perceptron-------------------------NORMALIZED
-Mejores parametros Binary - Multilayer Perceptron: {'classifier__activation': 'relu', 'classifier__alpha': 0.01, 'classifier__hidden_layer_sizes': (50,), 'vectorizer__max_df': 0.95, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
-Mejor macro avg f1-score: 0.6630867172841416
-                        precision    recall  f1-score   support
-
-               Culture       0.57      0.40      0.47        10
-               Economy       0.70      0.94      0.81        33
-Science and technology       0.92      0.65      0.76        17
-                Sports       1.00      0.79      0.88        14
-
-              accuracy                           0.77        74
-             macro avg       0.80      0.69      0.73        74
-          weighted avg       0.79      0.77      0.76        74
-
-
-
-Fitting 5 folds for each of 36 candidates, totalling 180 fits
--------------------------TF-IDF - Multilayer Perceptron-------------------------NORMALIZED
-Mejores parametros TF-IDF - Multilayer Perceptron: {'classifier__activation': 'tanh', 'classifier__alpha': 0.01, 'classifier__hidden_layer_sizes': (50,), 'vectorizer__max_df': 0.95, 'vectorizer__max_features': 5000, 'vectorizer__min_df': 1, 'vectorizer__ngram_range': (1, 1)}
-Mejor macro avg f1-score: 0.45336112106492543
-                        precision    recall  f1-score   support
-
-               Culture       0.00      0.00      0.00        10
-               Economy       0.55      0.97      0.70        33
+               Economy       0.58      0.97      0.73        33
 Science and technology       0.00      0.00      0.00        17
-                Sports       0.75      0.86      0.80        14
+                Sports       0.63      0.86      0.73        14
 
               accuracy                           0.59        74
-             macro avg       0.33      0.46      0.38        74
-          weighted avg       0.39      0.59      0.46        74
+             macro avg       0.30      0.46      0.36        74
+          weighted avg       0.38      0.59      0.46        74
 
 
 
-Tiempo de ejecución: 652.7435336112976 segundos
+Tiempo de ejecución: 244.13722467422485 segundos
+
+Process finished with exit code 0
